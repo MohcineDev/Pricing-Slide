@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="st.css">
+    <title>Pricing Slide</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="card">
+            <div class="header">
+                <p>Basic</p>
+                <canvas class="canvas"></canvas>
+            </div>
+            <div class="main">
+                <div class="content">
+                    <p>$29.99</p>
+                    <p>CPU AMD Athlon</p>
+                    <p>Max 100 item / month</p>
+                    <p>Memory 4 Gb</p>
+                    <p>Lorem ipsum</p>
+                    <p>Email Contact</p>
+                </div>
+                <button>Get Started</button>
+            </div>
+        </div>
+        <div class="card card2">
+            <div class="off">
+                <p>10% Off</p>
+            </div>
+                <p>premium</p>
+                <canvas class="canvas0"></canvas>
+
+            <div class="main">
+                <div class="content">
+                    <p>$39.99</p>
+                    <p>CPU Xeon E3</p>
+                    <p>Max 250 item / month</p>
+                    <p>Memory 16 Gb</p>
+                    <p>Basic statistic</p>
+                    <p> VPS Hosting</p>
+                </div>
+                <button>Get Started</button>
+            </div>
+        </div>
+
+      
+          <div class="card card3">
+            <div class="off">
+                <p>25% Off</p>
+            </div>
+            <div class="header">
+                <p>Advanced</p>
+                <canvas class="canvas1"></canvas>
+            </div>
+
+            <div class="main">
+                <div class="content">
+                    <p>$49.99</p>
+                    <p>CPU AMD Opteron</p>
+                    <p>Max 500 item / month</p>
+                    <p>Memory 32 Gb</p>
+                    <p>Lorem ipsum</p>
+                    <p>Dedicated Hosting</p>
+                </div>
+                <button>Get Started</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        const canvas = document.querySelector('.canvas')
+        const canvas0 = document.querySelector('.canvas0')
+        const canvas1 = document.querySelector('.canvas1')
+
+        drawCanvas( canvas)
+        drawCanvas( canvas0)
+        drawCanvas( canvas1)
+
+        //make a function just to avoid code repetition
+        
+        function drawCanvas(something) {
+
+            let ctx = something.getContext('2d')
+
+            ctx.beginPath()
+            ctx.moveTo(80, 70)
+            ctx.bezierCurveTo(100, 80, 100, 60, 120, 70)
+            ctx.bezierCurveTo(140, 80, 140, 60, 160, 70)
+            ctx.bezierCurveTo(180, 80, 180, 60, 200, 70)
+
+            ctx.lineWidth = 2
+            ctx.strokeStyle = '#fff'
+            ctx.stroke()
+        }
+
+    </script>
+</body>
+
+</html>
