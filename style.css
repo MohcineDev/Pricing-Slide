@@ -8,6 +8,7 @@ body {
     background-color: #313131;
     font-family: Arial, Helvetica, sans-serif;
     color: rgb(117, 117, 117);
+    margin: 0;
 }
 
 .container {
@@ -17,6 +18,12 @@ body {
     height: 100vh;
     flex-direction: column;
     position: relative;
+}
+
+.test {
+    width: 18%;
+    height: 25vh;
+    position: absolute;
 }
 
 .card {
@@ -99,6 +106,8 @@ button {
     color: var(--b);
     font-size: 1em;
     font-weight: 500;
+    transition: background-color 0.6s, border 0.6s, color 0.6s;
+    cursor: pointer;
 }
 
 .card2 button {
@@ -109,6 +118,26 @@ button {
 .card3 button {
     border: 2px solid var(--p);
     color: var(--p);
+}
+
+/*---+++++++*/
+
+.card button:hover {
+    background-color: var(--b);
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.card2 button:hover {
+    background-color: var(--v);
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.card3 button:hover {
+    background-color: var(--p);
+    border: 2px solid #fff;
+    color: #fff;
 }
 
 .card2, .card3 {
@@ -149,7 +178,8 @@ button {
 .nav span {
     width: 15px;
     height: 15px;
-    border: 2px solid rgb(239, 108, 108);
+    border: 2px solid var(--v);
+    background-color: var(--v);
     border-radius: 12px;
     margin: 0 5px;
     display: inline-block;
@@ -157,13 +187,48 @@ button {
 
 .nav span:nth-child(1) {
     border-radius: 12px 0;
+    border: 2px solid var(--b);
+    background-color: var(--b);
+
 }
 
 .nav span:nth-child(3) {
     border-radius: 0 12px;
+    border: 2px solid var(--p);
+    background-color: var(--p);
 }
 
 .nav span:hover {
     cursor: pointer;
-    background-color: #c93c3c;
+    background-color: #fff;
+}
+
+.left, .right {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    border-top: 8px solid #fff;
+    border-right: 8px solid #fff;
+    border-radius: 8px;
+    top: 45%;
+    z-index: 3;
+}
+
+.right {
+    right: -80px;
+    transform: rotate(45deg);
+}
+
+.left {
+    transform: rotate(-125deg);
+    left: -80px;
+}
+
+.left:hover, .right:hover {
+    cursor: pointer;
+    border-color: rgb(79, 238, 142);
+}
+
+.select {
+    background-color: #fff !important;
 }

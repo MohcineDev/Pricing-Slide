@@ -3,6 +3,8 @@
 
 <head>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
     <title>Pricing Slide</title>
 </head>
 
@@ -69,52 +71,18 @@
                 <button>Get Started</button>
             </div>
         </div>
+        <div class="test">
+            <div class="right"></div>
+            <div class="left"></div>
+        </div>
         <div class="nav">
             <span onclick="show(0)"></span>
             <span onclick="show(1)"></span>
             <span onclick="show(2)"></span>
         </div>
+
     </div>
 
-    <script>
-        const canvas = document.querySelector('.canvas')
-        const canvas0 = document.querySelector('.canvas0')
-        const canvas1 = document.querySelector('.canvas1')
-
-        drawCanvas(canvas)
-        drawCanvas(canvas0)
-        drawCanvas(canvas1)
-
-        //make a function just to avoid code repetition
-
-        function drawCanvas(something) {
-
-            let ctx = something.getContext('2d')
-
-            ctx.beginPath()
-            ctx.moveTo(80, 70)
-            ctx.bezierCurveTo(100, 80, 100, 60, 120, 70)
-            ctx.bezierCurveTo(140, 80, 140, 60, 160, 70)
-            ctx.bezierCurveTo(180, 80, 180, 60, 200, 70)
-
-            ctx.lineWidth = 2
-            ctx.strokeStyle = '#fff'
-            ctx.stroke()
-        }
-
-        const cards = document.querySelectorAll('.card')
-        const nav = document.querySelector('.nav').children
-
-        console.log(cards[1]);
-        show(0)
-        function show(a) {
-            for (let i = 0; i < cards.length; i++) {
-                cards[i].style.display = 'none'
-            }
-            cards[a].style.display = 'block'
-        }
-
-    </script>
 </body>
 
 </html>
