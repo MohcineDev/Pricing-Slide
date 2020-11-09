@@ -20,29 +20,23 @@ body {
     position: relative;
 }
 
-.test {
-    width: 18%;
-    height: 25vh;
-    position: absolute;
-}
-
 .card {
-    width: 18%;
+    width: 300px;
     height: 75vh;
     border-radius: 10px;
     display: flex;
     position: relative;
     flex-direction: column;
-    background: linear-gradient( var(--b), #fff 23%, #fff 78%, var(--b));
+    background: linear-gradient( var(--b), #fff 25%, #fff 75%, var(--b));
     display: none;
 }
 
 .card2 {
-    background: linear-gradient( var(--v), #fff 23%, #fff 78%, var(--v));
+    background: linear-gradient( var(--v), #fff 25%, #fff 75%, var(--v));
 }
 
 .card3 {
-    background: linear-gradient( var(--p), #fff 23%, #fff 78%, var(--p));
+    background: linear-gradient( var(--p), #fff 25%, #fff 75%, var(--p));
 }
 
 canvas {
@@ -189,7 +183,6 @@ button {
     border-radius: 12px 0;
     border: 2px solid var(--b);
     background-color: var(--b);
-
 }
 
 .nav span:nth-child(3) {
@@ -203,6 +196,13 @@ button {
     background-color: #fff;
 }
 
+.right-left {
+    width: 300px;
+    height: 20px;
+    z-index: 10;
+    position: absolute;
+}
+
 .left, .right {
     width: 20px;
     height: 20px;
@@ -210,18 +210,17 @@ button {
     border-top: 8px solid #fff;
     border-right: 8px solid #fff;
     border-radius: 8px;
-    top: 45%;
     z-index: 3;
 }
 
 .right {
-    right: -80px;
+    right: -50px;
     transform: rotate(45deg);
 }
 
 .left {
     transform: rotate(-125deg);
-    left: -80px;
+    left: -50px;
 }
 
 .left:hover, .right:hover {

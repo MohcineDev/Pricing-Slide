@@ -9,15 +9,15 @@ drawCanvas(canvas1)
 //make a function just to avoid code repetition
 function drawCanvas(something) {
     let ctx = something.getContext('2d')
-
+//x, y
     ctx.beginPath()
-    ctx.moveTo(80, 70)
-    ctx.bezierCurveTo(100, 80, 100, 60, 120, 70)
-    ctx.bezierCurveTo(140, 80, 140, 60, 160, 70)
-    ctx.bezierCurveTo(180, 80, 180, 60, 200, 70)
-
-    ctx.lineWidth = 2
-    ctx.strokeStyle = '#fff'
+    ctx.moveTo(90, 70)
+    ctx.bezierCurveTo(110, 80, 110, 60, 130, 70)
+    ctx.bezierCurveTo(150, 80, 150, 60, 170, 70)
+    ctx.bezierCurveTo(190, 80, 190, 60, 210, 70)
+ 
+    ctx.lineWidth = 3
+    ctx.strokeStyle = '#eee'
     ctx.stroke()
 }
 /************************ */
