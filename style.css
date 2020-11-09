@@ -15,20 +15,21 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     flex-direction: column;
     position: relative;
 }
 
 .card {
     width: 300px;
-    height: 75vh;
+    min-height:80vh;
     border-radius: 10px;
     display: flex;
     position: relative;
     flex-direction: column;
     background: linear-gradient( var(--b), #fff 25%, #fff 75%, var(--b));
     display: none;
+    margin: 20px 0;
 }
 
 .card2 {
